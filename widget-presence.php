@@ -45,7 +45,7 @@ class InitLab_Presence_Widget extends WP_Widget {
 	// Create the admin area widget settings form.
 	public function form($instance) {
 		foreach ($this->options as $key => $field) {
-			$value = $instance[$key] ?? $field['default'];
+			$value = !empty($instance[$key]) ? $instance[$key] : $field['default'];
 			?>
 			<p>
 				<label for="<?php echo $this->get_field_id($key); ?>"><?php echo $field['desc']; ?></label>
