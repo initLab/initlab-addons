@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: init Lab Addons\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-04 20:57+0000\n"
-"PO-Revision-Date: 2020-09-04 20:59+0000\n"
+"POT-Creation-Date: 2020-09-04 23:23+0000\n"
+"PO-Revision-Date: 2020-09-04 23:26+0000\n"
 "Last-Translator: \n"
 "Language-Team: Български\n"
 "Language: bg_BG\n"
@@ -14,42 +14,76 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.4.3; wp-5.5.1"
 
-#: widget-presence.php:17
-msgid "Avatar size"
-msgstr "Размер на аватара"
+#: settings.php:15
+msgid ""
+"Please input the correct settings so the [initlab_mailman_token] shortcode "
+"can operate properly."
+msgstr ""
+"Моля въведете правилните настройки, за да може краткия код "
+"[initlab_mailman_token] да работи правилно."
 
-#. URI of the plugin
-msgid "https://github.com/initlab/initlab-addons"
-msgstr "https://github.com/initlab/initlab-addons"
+#: settings.php:74
+msgid "Mailman token shortcode settings"
+msgstr "Настройки на краткия код \"Mailman token\""
 
-#. Author URI of the plugin
-msgid "https://github.com/user890104"
-msgstr "https://github.com/user890104"
+#. Use $args' label_for to populate the id inside the callback.
+#: settings.php:83
+msgid "Mailman version"
+msgstr "Версия на Mailman"
 
-#. Name of the plugin
-msgid "init Lab Addons"
-msgstr "Инит Лаб добавки"
+#. Use $args' label_for to populate the id inside the callback.
+#: settings.php:102
+msgid "SUBSCRIBE_FORM_SECRET"
+msgstr "SUBSCRIBE_FORM_SECRET"
+
+#: settings.php:132
+msgid "Settings saved."
+msgstr "Настройките са запазени."
+
+#: settings.php:160
+msgid "init Lab Options"
+msgstr "Настройки на Инит Лаб"
+
+#: settings.php:161
+msgid "init Lab"
+msgstr "Инит Лаб"
 
 #: widget-presence.php:9
 msgid "init Lab Presence widget"
 msgstr "Инит Лаб джаджа за присъствие"
 
-#: widget-presence.php:39
-msgid "Loading..."
-msgstr "Зареждане..."
+#: widget-presence.php:13
+msgid "Title"
+msgstr "Заглавие"
+
+#: widget-presence.php:17
+msgid "Avatar size"
+msgstr "Размер на аватара"
 
 #: widget-presence.php:21
 msgid "Refresh time (seconds, 0=off)"
 msgstr "Период на обновяване (секунди, 0=изключено)"
 
-#: widget-presence.php:13
-msgid "Title"
-msgstr "Заглавие"
+#: widget-presence.php:39
+msgid "Loading..."
+msgstr "Зареждане..."
+
+#. Name of the plugin
+msgid "init Lab Addons"
+msgstr "Инит Лаб добавки"
+
+#. Description of the plugin
+msgid "Widgets and other features for init Lab's website"
+msgstr "Джаджи и други функционалности за сайта на Инит Лаб"
+
+#. URI of the plugin
+msgid "https://github.com/initlab/initlab-addons"
+msgstr "https://github.com/initlab/initlab-addons"
 
 #. Author of the plugin
 msgid "Vencislav Atanasov"
 msgstr "Венцислав Атанасов"
 
-#. Description of the plugin
-msgid "Widgets and other features for init Lab's website"
-msgstr "Джаджи и други функционалности за сайта на Инит Лаб"
+#. Author URI of the plugin
+msgid "https://github.com/user890104"
+msgstr "https://github.com/user890104"

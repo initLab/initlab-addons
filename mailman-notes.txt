@@ -1,0 +1,47 @@
+2.1.16 - 2.1.20
+mm_cfg.SUBSCRIBE_FORM_SECRET + now + mlist.internal_name() + (remote_host / remote_addr)
+
+2.1.21 - 2.1.26
+remote = remote.rsplit('.', 1)[0] / remote.rsplit(':', 1)[0]
+mm_cfg.SUBSCRIBE_FORM_SECRET + now + mlist.internal_name() + remote
+
+2.1.27 - 2.1.29
+remote = remote.rsplit('.', 1)[0] / remote.rsplit(':', 1)[0]
+mm_cfg.SUBSCRIBE_FORM_SECRET + ":" + now + ":" + mlist.internal_name() + ":" + remote
+
+2.1.30+
+remote = remote.rsplit('.', 1)[0] / remote.rsplit(':', 1)[0]
+mm_cfg.SUBSCRIBE_FORM_SECRET + ":" + now + ":" + captcha_idx + ":" + mlist.internal_name() + ":" + remote
+
+2.1.16 (16-Oct-2013)
+    - There is a new mm_cfg.py setting SUBSCRIBE_FORM_SECRET which will put
+      a dynamically generated, hidden hash in the listinfo subscribe form and
+      check it upon submission.  Setting this will prevent automated processes
+      (bots) from successfully POSTing web subscribes without first retrieving
+      and parsing the form from the listinfo page.  The form must also be
+      submitted no later than FORM_LIFETIME nor no earlier than
+      SUBSCRIBE_FORM_MIN_TIME after retrieval.  Note that enabling this will
+      break any static subscribe forms on your site.  See the description in
+      Defaults.py for more info.  (LP: #1082746)
+
+2.1.21 (28-Feb-2016)
+    - If SUBSCRIBE_FORM_SECRET is enabled and a user's network has a load
+      balancer or similar in use the POSTing IP might not exactly match the
+      GETting IP.  This is now accounted for by not requiring the last
+      octet (16 bits for ipV6) to match.  (LP: #1447445)
+
+2.1.27 (22-Jun-2018)
+    - The hash generated when SUBSCRIBE_FORM_SECRET is set could have been
+      the same as one generated at the same time for a different list and
+      IP address.  While this is not thought to be exploitable in any way,
+      the generation has been changed to avoid this.  Thanks to Ralf Jung.
+
+2.1.30 (13-Apr-2020)
+    - Thanks to Ralf Jung there is now the ability to add text based captchas
+      (aka textchas) to the listinfo subscribe form.  See the documentation
+      for the new CAPTCHA setting in Defaults.py for how to enable this.  Also
+      note that if you have custom listinfo.html templates, you will have to
+      add a <mm-captcha-ui> tag to those templates to make this work.  This
+      feature can be used in combination with or instead of the Google
+      reCAPTCHA feature added in 2.1.26.
+

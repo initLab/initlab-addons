@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: init Lab Addons\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-04 20:57+0000\n"
+"POT-Creation-Date: 2020-09-04 23:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,42 +15,74 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.4.3; wp-5.5.1"
 
-#: widget-presence.php:17
-msgid "Avatar size"
+#: settings.php:15
+msgid ""
+"Please input the correct settings so the [initlab_mailman_token] shortcode "
+"can operate properly."
 msgstr ""
 
-#. URI of the plugin
-msgid "https://github.com/initlab/initlab-addons"
+#: settings.php:74
+msgid "Mailman token shortcode settings"
 msgstr ""
 
-#. Author URI of the plugin
-msgid "https://github.com/user890104"
+#. Use $args' label_for to populate the id inside the callback.
+#: settings.php:83
+msgid "Mailman version"
 msgstr ""
 
-#. Name of the plugin
-msgid "init Lab Addons"
+#. Use $args' label_for to populate the id inside the callback.
+#: settings.php:102
+msgid "SUBSCRIBE_FORM_SECRET"
+msgstr ""
+
+#: settings.php:132
+msgid "Settings saved."
+msgstr ""
+
+#: settings.php:160
+msgid "init Lab Options"
+msgstr ""
+
+#: settings.php:161
+msgid "init Lab"
 msgstr ""
 
 #: widget-presence.php:9
 msgid "init Lab Presence widget"
 msgstr ""
 
-#: widget-presence.php:39
-msgid "Loading..."
+#: widget-presence.php:13
+msgid "Title"
+msgstr ""
+
+#: widget-presence.php:17
+msgid "Avatar size"
 msgstr ""
 
 #: widget-presence.php:21
 msgid "Refresh time (seconds, 0=off)"
 msgstr ""
 
-#: widget-presence.php:13
-msgid "Title"
+#: widget-presence.php:39
+msgid "Loading..."
+msgstr ""
+
+#. Name of the plugin
+msgid "init Lab Addons"
+msgstr ""
+
+#. Description of the plugin
+msgid "Widgets and other features for init Lab's website"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/initlab/initlab-addons"
 msgstr ""
 
 #. Author of the plugin
 msgid "Vencislav Atanasov"
 msgstr ""
 
-#. Description of the plugin
-msgid "Widgets and other features for init Lab's website"
+#. Author URI of the plugin
+msgid "https://github.com/user890104"
 msgstr ""

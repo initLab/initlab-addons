@@ -3,7 +3,7 @@
  * Plugin Name: init Lab Addons
  * Plugin URI:  https://github.com/initlab/initlab-addons
  * Description: Widgets and other features for init Lab's website
- * Version:     2.0
+ * Version:     2.1
  * Author:      Vencislav Atanasov
  * Author URI:  https://github.com/user890104
  * Text Domain: initlab-addons
@@ -11,6 +11,8 @@
  */
 
 require __DIR__ . '/widget-presence.php';
+require __DIR__ . '/shortcode-mailman-token.php';
+require __DIR__ . '/settings.php';
 
 function initlab_load_plugin_textdomain() {
     load_plugin_textdomain('initlab-addons', false, basename(__DIR__) . '/languages');
