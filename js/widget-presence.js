@@ -1,5 +1,5 @@
 jQuery(function($) {
-	var containers = $('.initlab_presence_widget_container');
+	var containers = $('.initlab_widget_presence_container');
 	
 	function getGravatarResized(url, size) {
 		url = new URL(url);
@@ -21,6 +21,7 @@ jQuery(function($) {
 	
 	function updateContainer(container, users, avatarSize) {
 		if (users.length === 0) {
+			// TODO: translate
 			container.text('Всички ги е хванала липсата :(');
 			return;
 		}

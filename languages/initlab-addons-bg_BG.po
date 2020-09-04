@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: init Lab Addons\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-04 20:57+0000\n"
+"PO-Revision-Date: 2020-09-04 20:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: Български\n"
+"Language: bg_BG\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.4.3; wp-5.5.1"
+
+#: widget-presence.php:17
+msgid "Avatar size"
+msgstr "Размер на аватара"
+
+#. URI of the plugin
+msgid "https://github.com/initlab/initlab-addons"
+msgstr "https://github.com/initlab/initlab-addons"
+
+#. Author URI of the plugin
+msgid "https://github.com/user890104"
+msgstr "https://github.com/user890104"
+
+#. Name of the plugin
+msgid "init Lab Addons"
+msgstr "Инит Лаб добавки"
+
+#: widget-presence.php:9
+msgid "init Lab Presence widget"
+msgstr "Инит Лаб джаджа за присъствие"
+
+#: widget-presence.php:39
+msgid "Loading..."
+msgstr "Зареждане..."
+
+#: widget-presence.php:21
+msgid "Refresh time (seconds, 0=off)"
+msgstr "Период на обновяване (секунди, 0=изключено)"
+
+#: widget-presence.php:13
+msgid "Title"
+msgstr "Заглавие"
+
+#. Author of the plugin
+msgid "Vencislav Atanasov"
+msgstr "Венцислав Атанасов"
+
+#. Description of the plugin
+msgid "Widgets and other features for init Lab's website"
+msgstr "Джаджи и други функционалности за сайта на Инит Лаб"
