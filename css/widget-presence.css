@@ -8,7 +8,7 @@
 	margin-top: 0;
 }
 
-.initlab_widget_presence_container > .row > .name {
+.initlab_widget_presence_container > .row > .username {
 	margin-left: 1em;
 	font-weight: bold;
 }
