@@ -21,8 +21,18 @@ jQuery(function($) {
 
 	function updateContainer(container, users, avatarSize) {
 		if (users.length === 0) {
-			// TODO: translate
-			container.text('Всички ги е хванала липсата :(');
+			var lang = ($('html').prop('lang') || 'en').substring(0, 2);
+			var goneText;
+
+			switch (lang) {
+				case 'bg':
+					goneText = 'Всички ги е хванала липсата :(';
+					break;
+				default:
+					goneText = 'Everyone is gone :(';
+			}
+
+			container.text(goneText);
 			return;
 		}
 
