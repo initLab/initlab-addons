@@ -61,6 +61,72 @@ function initlab_field_mailman_secret_cb($args) {
     <input type="text" size="64" id="<?php echo esc_attr($args['label_for']); ?>" name="initlab_options[<?php echo esc_attr($args['label_for']); ?>]" value="<?php echo esc_attr(array_key_exists($args['label_for'], $options) ? $options[$args['label_for']] : '')?>">
     <?php
 }
+
+/**
+ * Discord section callback function.
+ *
+ * @param array $args  The settings array, defining title, id, callback.
+ */
+function initlab_section_discord_callback($args) {
+    ?>
+    <p><?php _e('In order to integrate with Discord, you need a bot that\'s already added to your server with the <strong>MANAGE_EVENTS</strong> permission.', 'initlab-addons'); ?></p>
+    <?php
+}
+
+/**
+ * initlab_field_discord_guild_id callback function.
+ *
+ * WordPress has magic interaction with the following keys: label_for, class.
+ * - the "label_for" key value is used for the "for" attribute of the <label>.
+ * - the "class" key value is used for the "class" attribute of the <tr> containing the field.
+ * Note: you can add custom key value pairs to be used inside your callbacks.
+ *
+ * @param array $args
+ */
+function initlab_field_discord_guild_id_cb($args) {
+    // Get the value of the setting we've registered with register_setting()
+    $options = get_option('initlab_options', []);
+    ?>
+    <input type="text" size="24" id="<?php echo esc_attr($args['label_for']); ?>" name="initlab_options[<?php echo esc_attr($args['label_for']); ?>]" value="<?php echo esc_attr(array_key_exists($args['label_for'], $options) ? $options[$args['label_for']] : '')?>">
+    <?php
+}
+
+/**
+ * initlab_field_discord_bot_token callback function.
+ *
+ * WordPress has magic interaction with the following keys: label_for, class.
+ * - the "label_for" key value is used for the "for" attribute of the <label>.
+ * - the "class" key value is used for the "class" attribute of the <tr> containing the field.
+ * Note: you can add custom key value pairs to be used inside your callbacks.
+ *
+ * @param array $args
+ */
+function initlab_field_discord_bot_token_cb($args) {
+    // Get the value of the setting we've registered with register_setting()
+    $options = get_option('initlab_options', []);
+    ?>
+    <input type="text" size="96" id="<?php echo esc_attr($args['label_for']); ?>" name="initlab_options[<?php echo esc_attr($args['label_for']); ?>]" value="<?php echo esc_attr(array_key_exists($args['label_for'], $options) ? $options[$args['label_for']] : '')?>">
+    <?php
+}
+
+/**
+ * initlab_field_discord_stage_channel_id callback function.
+ *
+ * WordPress has magic interaction with the following keys: label_for, class.
+ * - the "label_for" key value is used for the "for" attribute of the <label>.
+ * - the "class" key value is used for the "class" attribute of the <tr> containing the field.
+ * Note: you can add custom key value pairs to be used inside your callbacks.
+ *
+ * @param array $args
+ */
+function initlab_field_discord_stage_channel_id_cb($args) {
+    // Get the value of the setting we've registered with register_setting()
+    $options = get_option('initlab_options', []);
+    ?>
+    <input type="text" size="24" id="<?php echo esc_attr($args['label_for']); ?>" name="initlab_options[<?php echo esc_attr($args['label_for']); ?>]" value="<?php echo esc_attr(array_key_exists($args['label_for'], $options) ? $options[$args['label_for']] : '')?>">
+    <?php
+}
+
 /**
  * custom option and settings
  */
@@ -105,6 +171,53 @@ function initlab_settings_init() {
         'initlab_section_mailman_token',
         [
             'label_for' => 'mailman_secret',
+        ]
+    );
+
+    // Register a new section in the "initlab" page.
+    add_settings_section(
+        'initlab_section_discord',
+        __('Discord settings', 'initlab-addons'),
+        'initlab_section_discord_callback',
+        'initlab'
+    );
+
+    // Register a new field in the "initlab_section_discord" section, inside the "initlab" page.
+    add_settings_field(
+        'initlab_field_discord_guild_id', // As of WP 4.6 this value is used only internally.
+                                           // Use $args' label_for to populate the id inside the callback.
+        __('Guild ID (Server ID)', 'initlab-addons'),
+        'initlab_field_discord_guild_id_cb',
+        'initlab',
+        'initlab_section_discord',
+        [
+            'label_for' => 'discord_guild_id',
+        ]
+    );
+
+    // Register a new field in the "initlab_section_discord" section, inside the "initlab" page.
+    add_settings_field(
+        'initlab_field_discord_bot_token', // As of WP 4.6 this value is used only internally.
+                                           // Use $args' label_for to populate the id inside the callback.
+        __('Bot token', 'initlab-addons'),
+        'initlab_field_discord_bot_token_cb',
+        'initlab',
+        'initlab_section_discord',
+        [
+            'label_for' => 'discord_bot_token',
+        ]
+    );
+
+    // Register a new field in the "initlab_section_discord" section, inside the "initlab" page.
+    add_settings_field(
+        'initlab_field_discord_stage_channel_id', // As of WP 4.6 this value is used only internally.
+                                           // Use $args' label_for to populate the id inside the callback.
+        __('Stage channel ID', 'initlab-addons'),
+        'initlab_field_discord_stage_channel_id_cb',
+        'initlab',
+        'initlab_section_discord',
+        [
+            'label_for' => 'discord_stage_channel_id',
         ]
     );
 }
