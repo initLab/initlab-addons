@@ -128,6 +128,24 @@ function initlab_field_discord_stage_channel_id_cb($args) {
 }
 
 /**
+ * initlab_field_discord_invite_url callback function.
+ *
+ * WordPress has magic interaction with the following keys: label_for, class.
+ * - the "label_for" key value is used for the "for" attribute of the <label>.
+ * - the "class" key value is used for the "class" attribute of the <tr> containing the field.
+ * Note: you can add custom key value pairs to be used inside your callbacks.
+ *
+ * @param array $args
+ */
+function initlab_field_discord_invite_url_cb($args) {
+    // Get the value of the setting we've registered with register_setting()
+    $options = get_option('initlab_options', []);
+    ?>
+    <input type="text" size="32" id="<?php echo esc_attr($args['label_for']); ?>" name="initlab_options[<?php echo esc_attr($args['label_for']); ?>]" value="<?php echo esc_attr(array_key_exists($args['label_for'], $options) ? $options[$args['label_for']] : '')?>">
+    <?php
+}
+
+/**
  * custom option and settings
  */
 function initlab_settings_init() {
@@ -218,6 +236,19 @@ function initlab_settings_init() {
         'initlab_section_discord',
         [
             'label_for' => 'discord_stage_channel_id',
+        ]
+    );
+
+    // Register a new field in the "initlab_section_discord" section, inside the "initlab" page.
+    add_settings_field(
+        'initlab_field_discord_invite_url', // As of WP 4.6 this value is used only internally.
+                                           // Use $args' label_for to populate the id inside the callback.
+        __('Invite URL', 'initlab-addons'),
+        'initlab_field_discord_invite_url_cb',
+        'initlab',
+        'initlab_section_discord',
+        [
+            'label_for' => 'discord_invite_url',
         ]
     );
 }
