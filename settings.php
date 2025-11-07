@@ -4,6 +4,24 @@
  *  - callback functions
  */
 
+/**
+ * initlab_field_text_template callback function.
+ *
+ * WordPress has magic interaction with the following keys: label_for, class.
+ * - the "label_for" key value is used for the "for" attribute of the <label>.
+ * - the "class" key value is used for the "class" attribute of the <tr> containing the field.
+ * Note: you can add custom key value pairs to be used inside your callbacks.
+ *
+ * @param array $args
+ * @param string $size
+ */
+function initlab_field_text_template($args, $size = 24) {
+    // Get the value of the setting we've registered with register_setting()
+    $options = get_option('initlab_options', []);
+    ?>
+    <input type="text" size="<?php echo strval($size); ?>" id="<?php echo esc_attr($args['label_for']); ?>" name="initlab_options[<?php echo esc_attr($args['label_for']); ?>]" value="<?php echo esc_attr(array_key_exists($args['label_for'], $options) ? $options[$args['label_for']] : '')?>">
+    <?php
+}
 
 /**
  * Mailman token section callback function.
@@ -44,22 +62,8 @@ function initlab_field_mailman_version_cb($args) {
     <?php
 }
 
-/**
- * initlab_field_mailman_secret callback function.
- *
- * WordPress has magic interaction with the following keys: label_for, class.
- * - the "label_for" key value is used for the "for" attribute of the <label>.
- * - the "class" key value is used for the "class" attribute of the <tr> containing the field.
- * Note: you can add custom key value pairs to be used inside your callbacks.
- *
- * @param array $args
- */
 function initlab_field_mailman_secret_cb($args) {
-    // Get the value of the setting we've registered with register_setting()
-    $options = get_option('initlab_options', []);
-    ?>
-    <input type="text" size="64" id="<?php echo esc_attr($args['label_for']); ?>" name="initlab_options[<?php echo esc_attr($args['label_for']); ?>]" value="<?php echo esc_attr(array_key_exists($args['label_for'], $options) ? $options[$args['label_for']] : '')?>">
-    <?php
+    initlab_field_text_template($args, 64);
 }
 
 /**
@@ -73,76 +77,20 @@ function initlab_section_discord_callback($args) {
     <?php
 }
 
-/**
- * initlab_field_discord_guild_id callback function.
- *
- * WordPress has magic interaction with the following keys: label_for, class.
- * - the "label_for" key value is used for the "for" attribute of the <label>.
- * - the "class" key value is used for the "class" attribute of the <tr> containing the field.
- * Note: you can add custom key value pairs to be used inside your callbacks.
- *
- * @param array $args
- */
 function initlab_field_discord_guild_id_cb($args) {
-    // Get the value of the setting we've registered with register_setting()
-    $options = get_option('initlab_options', []);
-    ?>
-    <input type="text" size="24" id="<?php echo esc_attr($args['label_for']); ?>" name="initlab_options[<?php echo esc_attr($args['label_for']); ?>]" value="<?php echo esc_attr(array_key_exists($args['label_for'], $options) ? $options[$args['label_for']] : '')?>">
-    <?php
+    initlab_field_text_template($args, 24);
 }
 
-/**
- * initlab_field_discord_bot_token callback function.
- *
- * WordPress has magic interaction with the following keys: label_for, class.
- * - the "label_for" key value is used for the "for" attribute of the <label>.
- * - the "class" key value is used for the "class" attribute of the <tr> containing the field.
- * Note: you can add custom key value pairs to be used inside your callbacks.
- *
- * @param array $args
- */
 function initlab_field_discord_bot_token_cb($args) {
-    // Get the value of the setting we've registered with register_setting()
-    $options = get_option('initlab_options', []);
-    ?>
-    <input type="text" size="96" id="<?php echo esc_attr($args['label_for']); ?>" name="initlab_options[<?php echo esc_attr($args['label_for']); ?>]" value="<?php echo esc_attr(array_key_exists($args['label_for'], $options) ? $options[$args['label_for']] : '')?>">
-    <?php
+    initlab_field_text_template($args, 96);
 }
 
-/**
- * initlab_field_discord_stage_channel_id callback function.
- *
- * WordPress has magic interaction with the following keys: label_for, class.
- * - the "label_for" key value is used for the "for" attribute of the <label>.
- * - the "class" key value is used for the "class" attribute of the <tr> containing the field.
- * Note: you can add custom key value pairs to be used inside your callbacks.
- *
- * @param array $args
- */
 function initlab_field_discord_stage_channel_id_cb($args) {
-    // Get the value of the setting we've registered with register_setting()
-    $options = get_option('initlab_options', []);
-    ?>
-    <input type="text" size="24" id="<?php echo esc_attr($args['label_for']); ?>" name="initlab_options[<?php echo esc_attr($args['label_for']); ?>]" value="<?php echo esc_attr(array_key_exists($args['label_for'], $options) ? $options[$args['label_for']] : '')?>">
-    <?php
+    initlab_field_text_template($args, 24);
 }
 
-/**
- * initlab_field_discord_invite_url callback function.
- *
- * WordPress has magic interaction with the following keys: label_for, class.
- * - the "label_for" key value is used for the "for" attribute of the <label>.
- * - the "class" key value is used for the "class" attribute of the <tr> containing the field.
- * Note: you can add custom key value pairs to be used inside your callbacks.
- *
- * @param array $args
- */
 function initlab_field_discord_invite_url_cb($args) {
-    // Get the value of the setting we've registered with register_setting()
-    $options = get_option('initlab_options', []);
-    ?>
-    <input type="text" size="32" id="<?php echo esc_attr($args['label_for']); ?>" name="initlab_options[<?php echo esc_attr($args['label_for']); ?>]" value="<?php echo esc_attr(array_key_exists($args['label_for'], $options) ? $options[$args['label_for']] : '')?>">
-    <?php
+    initlab_field_text_template($args, 32);
 }
 
 /**
