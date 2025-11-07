@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: init Lab Addons\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-04 23:23+0000\n"
-"PO-Revision-Date: 2020-09-04 23:26+0000\n"
+"PO-Revision-Date: 2025-11-07 19:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: Български\n"
 "Language: bg_BG\n"
@@ -14,7 +14,76 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.4.3; wp-5.5.1"
 
-#: settings.php:15
+#: widget-presence.php:17
+msgid "Avatar size"
+msgstr "Размер на аватара"
+
+#. Use $args' label_for to populate the id inside the callback.
+#: settings.php:168
+msgid "Bot token"
+msgstr "Токен на бота"
+
+#: settings.php:146
+msgid "Discord settings"
+msgstr "Настройки за Дискорд"
+
+#. Use $args' label_for to populate the id inside the callback.
+#: settings.php:155
+msgid "Guild ID (Server ID)"
+msgstr "ИД на сървъра"
+
+#. URI of the plugin
+msgid "https://github.com/initlab/initlab-addons"
+msgstr "https://github.com/initlab/initlab-addons"
+
+#. Author URI of the plugin
+#| msgid "https://github.com/user890104"
+msgid "https://gitlab.com/user890104"
+msgstr "https://gitlab.com/user890104"
+
+#: settings.php:76
+msgid ""
+"In order to integrate with Discord, you need a bot that's already added to "
+"your server with the <strong>MANAGE_EVENTS</strong> permission."
+msgstr ""
+"За интеграция с Дискорд е необходим бот, който вече е добавен към сървъра Ви "
+"с позволение за <strong>MANAGE_EVENTS</strong>."
+
+#: settings.php:253
+msgid "init Lab"
+msgstr "Инит Лаб"
+
+#. Name of the plugin
+msgid "init Lab Addons"
+msgstr "Инит Лаб добавки"
+
+#: settings.php:252
+msgid "init Lab Options"
+msgstr "Настройки на Инит Лаб"
+
+#: widget-presence.php:9
+msgid "init Lab Presence widget"
+msgstr "Инит Лаб джаджа за присъствие"
+
+#. Use $args' label_for to populate the id inside the callback.
+#: settings.php:194
+msgid "Invite URL"
+msgstr "УРЛ за присъединяване"
+
+#: widget-presence.php:39
+msgid "Loading..."
+msgstr "Зареждане..."
+
+#: settings.php:106
+msgid "Mailman token shortcode settings"
+msgstr "Настройки на краткия код \"Mailman token\""
+
+#. Use $args' label_for to populate the id inside the callback.
+#: settings.php:115
+msgid "Mailman version"
+msgstr "Версия на Mailman"
+
+#: settings.php:33
 msgid ""
 "Please input the correct settings so the [initlab_mailman_token] shortcode "
 "can operate properly."
@@ -22,68 +91,32 @@ msgstr ""
 "Моля въведете правилните настройки, за да може краткия код "
 "[initlab_mailman_token] да работи правилно."
 
-#: settings.php:74
-msgid "Mailman token shortcode settings"
-msgstr "Настройки на краткия код \"Mailman token\""
+#: widget-presence.php:21
+msgid "Refresh time (seconds, 0=off)"
+msgstr "Период на обновяване (секунди, 0=изключено)"
 
-#. Use $args' label_for to populate the id inside the callback.
-#: settings.php:83
-msgid "Mailman version"
-msgstr "Версия на Mailman"
-
-#. Use $args' label_for to populate the id inside the callback.
-#: settings.php:102
-msgid "SUBSCRIBE_FORM_SECRET"
-msgstr "SUBSCRIBE_FORM_SECRET"
-
-#: settings.php:132
+#: settings.php:224
 msgid "Settings saved."
 msgstr "Настройките са запазени."
 
-#: settings.php:160
-msgid "init Lab Options"
-msgstr "Настройки на Инит Лаб"
+#. Use $args' label_for to populate the id inside the callback.
+#: settings.php:181
+msgid "Stage channel ID"
+msgstr "ИД на канал за срещи"
 
-#: settings.php:161
-msgid "init Lab"
-msgstr "Инит Лаб"
-
-#: widget-presence.php:9
-msgid "init Lab Presence widget"
-msgstr "Инит Лаб джаджа за присъствие"
+#. Use $args' label_for to populate the id inside the callback.
+#: settings.php:134
+msgid "SUBSCRIBE_FORM_SECRET"
+msgstr "SUBSCRIBE_FORM_SECRET"
 
 #: widget-presence.php:13
 msgid "Title"
 msgstr "Заглавие"
 
-#: widget-presence.php:17
-msgid "Avatar size"
-msgstr "Размер на аватара"
-
-#: widget-presence.php:21
-msgid "Refresh time (seconds, 0=off)"
-msgstr "Период на обновяване (секунди, 0=изключено)"
-
-#: widget-presence.php:39
-msgid "Loading..."
-msgstr "Зареждане..."
-
-#. Name of the plugin
-msgid "init Lab Addons"
-msgstr "Инит Лаб добавки"
-
-#. Description of the plugin
-msgid "Widgets and other features for init Lab's website"
-msgstr "Джаджи и други функционалности за сайта на Инит Лаб"
-
-#. URI of the plugin
-msgid "https://github.com/initlab/initlab-addons"
-msgstr "https://github.com/initlab/initlab-addons"
-
 #. Author of the plugin
 msgid "Vencislav Atanasov"
 msgstr "Венцислав Атанасов"
 
-#. Author URI of the plugin
-msgid "https://github.com/user890104"
-msgstr "https://github.com/user890104"
+#. Description of the plugin
+msgid "Widgets and other features for init Lab's website"
+msgstr "Джаджи и други функционалности за сайта на Инит Лаб"
